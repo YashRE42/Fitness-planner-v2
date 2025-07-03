@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Activity Calendar</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="calendar-outer">
+    <div class="calendar-container">
+      <div class="calendar-header">
+        <button id="settingsBtn">⚙️</button>
+        <span class="title" id="calendarTitle"></span>
+      </div>
+      <div class="calendar-grid">
+        <div class="calendar-days">
+          <div>S</div><div>M</div><div>T</div><div>W</div><div>T</div><div>F</div><div>S</div>
+        </div>
+        <div class="calendar-dates" id="calendarDates">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Settings Modal -->
+  <div class="modal-bg" id="settingsModal">
+    <div class="modal">
+      <button class="close" onclick="document.getElementById('settingsModal').classList.remove('active')">×</button>
+      <div id="settingsContent"><!-- Populated by JS --></div>
+    </div>
+  </div>
+  <!-- Day Edit Modal -->
+  <div class="modal-bg" id="dayEditModal">
+    <div class="modal">
+      <button class="close" onclick="document.getElementById('dayEditModal').classList.remove('active')">×</button>
+      <div id="dayEditContent"><!-- Populated by JS --></div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
